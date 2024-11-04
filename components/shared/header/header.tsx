@@ -1,11 +1,11 @@
 "use client";
 
+import Logo from "@/components/features/logo";
+import Search from "@/components/features/search";
+import { ModeToggle } from "@/components/features/toggle-mode";
 import { useState, useEffect } from "react";
 
-import Link from "next/link";
-import Logo from "./logo";
-import { ModeToggle } from "./toggle-mode";
-import Search from "./search";
+
 // import MobileMenu from './mobile-menu'
 
 export default function NavHeader() {
@@ -37,7 +37,7 @@ export default function NavHeader() {
           <li>item3</li>
           {/* theme */}
           <div>
-            <ModeToggle />
+            <ModeToggle/>
           </div>
         </ul>
       </nav>
