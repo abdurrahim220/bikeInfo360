@@ -33,20 +33,26 @@ const MobileMenu = () => {
   return (
     <div className="lg:hidden relative" ref={menuRef}>
       <Button onClick={() => setIsMobileMenu(!isMobileMenu)}>
-        {isMobileMenu ? <AiOutlineClose size={25} /> : <AiOutlineMenu size={25} />}
+        {isMobileMenu ? (
+          <AiOutlineClose size={25} />
+        ) : (
+          <AiOutlineMenu size={25} />
+        )}
       </Button>
 
       {isMobileMenu && (
         <div
           className="absolute right-0 mt-2 w-48 bg-white shadow-md rounded-lg py-2"
-          onClick={() => setIsMobileMenu(false)} // Close when clicking anywhere inside the menu
+          onClick={() => setIsMobileMenu(false)}
         >
           <ul className="flex flex-col gap-2">
             <li>
               <Link
                 href="/bike-models"
                 className={`block px-4 py-2 ${
-                  pathname === "/bike-models" ? "text-blue-500" : "text-gray-700"
+                  pathname === "/bike-models"
+                    ? "text-blue-500"
+                    : "text-gray-700"
                 } hover:bg-gray-100`}
               >
                 Bike Models
