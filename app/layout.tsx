@@ -3,8 +3,6 @@ import { Rubik } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/shared/navbar/page";
 
-
-
 const rubik = Rubik({
   subsets: ["latin"],
   weight: ["400", "500", "700"],
@@ -24,12 +22,10 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning className="scroll-smooth">
       <body className={`${rubik.variable} antialiased`}>
-       
-          <div className="flex tracking-tight flex-col min-h-screen overflow-hidden supports-[overflow:clip]:overflow-clip">
-            <Navbar />
-            {children}
-          </div>
-     
+        <div className="flex tracking-tight flex-col min-h-screen overflow-hidden supports-[overflow:clip]:overflow-clip">
+          <Navbar />
+          {children}
+        </div>
       </body>
     </html>
   );

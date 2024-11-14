@@ -31,7 +31,7 @@ const MobileMenu = () => {
   }, [isMobileMenu]);
 
   return (
-    <div className="md:hidden relative" ref={menuRef}>
+    <div className="lg:hidden relative" ref={menuRef}>
       <Button onClick={() => setIsMobileMenu(!isMobileMenu)}>
         {isMobileMenu ? <AiOutlineClose size={25} /> : <AiOutlineMenu size={25} />}
       </Button>

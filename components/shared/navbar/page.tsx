@@ -58,7 +58,7 @@ const Navbar = () => {
 
           {/* Navigation Links */}
           <div className="md:flex md:items-center md:gap-12">
-            <nav aria-label="Global" className="hidden md:block">
+            <nav aria-label="Global" className="hidden lg:block">
               <ul className="flex items-center gap-6 text-lg">
                 <li>
                   <Link
