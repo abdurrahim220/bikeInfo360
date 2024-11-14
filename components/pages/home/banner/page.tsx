@@ -9,7 +9,6 @@ const Banner = () => {
   const [emblaRef, emblaApi] = useEmblaCarousel({ loop: false }, [Autoplay()]);
   const [selectedIndex, setSelectedIndex] = useState(0);
 
-  // Update selected index when the slide changes
   useEffect(() => {
     if (!emblaApi) return;
 
@@ -18,12 +17,14 @@ const Banner = () => {
     };
 
     emblaApi.on("select", selectHandler);
-    selectHandler(); // Set initial selected index
+    selectHandler();
 
-    // Cleanup listener on unmount
-    return () => emblaApi.off("select", selectHandler);
+    return () => {
+      emblaApi.off("select", selectHandler);
+    };
   }, [emblaApi]);
 
+  
   return (
     <div className="embla mt-20 relative" ref={emblaRef}>
       <div className="embla__container">
@@ -42,7 +43,7 @@ const Banner = () => {
         ))}
       </div>
 
-      {/* Dot Buttons Positioned in the Center-Bottom */}
+      
       <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2">
         <div className="flex gap-2">
           {sliders.map((_, index) => (
