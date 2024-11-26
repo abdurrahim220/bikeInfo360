@@ -1,6 +1,8 @@
 import UpdateMarque from "@/components/features/Marque/UpdateMarque";
 import Banner from "@/components/pages/home/banner/page";
 import BrowseAll from "@/components/pages/home/browseAll/page";
+import LatestBlogs from "@/components/pages/home/latest-blogs/page";
+
 import PopularBikes from "@/components/pages/home/popular-bikes/page";
 
 export default function Home() {
@@ -10,6 +12,7 @@ export default function Home() {
       <UpdateMarque />
       <BrowseAll />
       <PopularBikes/>
+      <LatestBlogs/>
     </div>
   );
 }

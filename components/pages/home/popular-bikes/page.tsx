@@ -17,6 +17,8 @@ const PopularBikes = () => {
         <h2 className="text-3xl md:text-4xl font-bold text-center mb-6">
           Most Popular Bikes
         </h2>
+
+        {/* Desktop Buttons on the sides */}
         <div className="hidden md:flex justify-end gap-5 items-center my-4">
             <button
               onClick={scrollPrev}
@@ -65,7 +67,7 @@ const PopularBikes = () => {
             <FaArrowRight className="text-lg" />
           </button>
 
-          {/* Desktop Buttons on the sides */}
+          
           
         </div>
       </WrapContainer>
