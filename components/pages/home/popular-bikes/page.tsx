@@ -17,19 +17,32 @@ const PopularBikes = () => {
         <h2 className="text-3xl md:text-4xl font-bold text-center mb-6">
           Most Popular Bikes
         </h2>
-
-        {/* Slider Container */}
+        <div className="hidden md:flex justify-end gap-5 items-center my-4">
+            <button
+              onClick={scrollPrev}
+              className="px-4 py-2 bg-gray-300 rounded-md shadow-md hover:bg-gray-400 focus:outline-none"
+            >
+              Prev
+            </button>
+            <button
+              onClick={scrollNext}
+              className="px-4 py-2 bg-gray-300 rounded-md shadow-md hover:bg-gray-400 focus:outline-none"
+            >
+              Next
+            </button>
+          </div>
+      
         <div className="relative">
-          {/* Slider Content */}
+        
           <div
             className="overflow-hidden"
-            ref={emblaRef} // Embla Carousel Reference
+            ref={emblaRef} 
           >
             <div className="flex">
               {Array.from({ length: 8 }).map((_, index) => (
                 <div
                   key={index}
-                  className="flex-[0_0_100%] md:flex-[0_0_50%] lg:flex-[0_0_25%] px-2" // Controls card width
+                  className="flex-[0_0_100%] md:flex-[0_0_50%] lg:flex-[0_0_25%] px-2" 
                 >
                   <PopularBikesCard />
                 </div>
@@ -53,20 +66,7 @@ const PopularBikes = () => {
           </button>
 
           {/* Desktop Buttons on the sides */}
-          <div className="hidden md:flex justify-between items-center mt-4">
-            <button
-              onClick={scrollPrev}
-              className="px-4 py-2 bg-gray-300 rounded-md shadow-md hover:bg-gray-400 focus:outline-none"
-            >
-              Prev
-            </button>
-            <button
-              onClick={scrollNext}
-              className="px-4 py-2 bg-gray-300 rounded-md shadow-md hover:bg-gray-400 focus:outline-none"
-            >
-              Next
-            </button>
-          </div>
+          
         </div>
       </WrapContainer>
     </section>
