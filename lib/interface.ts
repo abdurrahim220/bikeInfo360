@@ -26,3 +26,21 @@ export type Slider={
     id: number;
     type: string;
   };
+
+
+
+  export interface BikeModels {
+    id: string
+    name: string
+    image: string
+    rating: number
+    specs: {
+      cc: number
+      kmpl: number
+      category: string
+    }
+    pricing: {
+      exShowroom: string
+      emiStarts: number
+    }
+  }
