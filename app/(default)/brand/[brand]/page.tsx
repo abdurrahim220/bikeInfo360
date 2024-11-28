@@ -1,4 +1,5 @@
 "use client";
+import Breadcrumb from "@/components/features/ReUseContent/Breadcrumb";
 import WrapContainer from "@/components/features/WrapContainer";
 import HeroBikesSection from "@/components/pages/brands/page";
 import { useParams } from "next/navigation";
@@ -12,6 +13,12 @@ const BrandPage = () => {
   return (
     <div className="p-6 my-28 ">
       <WrapContainer>
+        <Breadcrumb
+          paths={[
+            { name: "brands", href: "/brand" },
+            { name: brandName || "unknown", href: `/brand/${brandName}` },
+          ]}
+        />
         <h1 className="text-2xl font-bold capitalize">
           Welcome to{" "}
           <span className="text-red-600 font-semibold">{brandName}</span> brand
