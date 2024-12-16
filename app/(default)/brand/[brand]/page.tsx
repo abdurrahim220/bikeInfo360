@@ -1,4 +1,5 @@
 "use client";
+import { useGetBikesByBrandQuery } from "@/app/redux/features/bikeApiSlice";
 import Breadcrumb from "@/components/features/ReUseContent/Breadcrumb";
 import WrapContainer from "@/components/features/WrapContainer";
 import HeroBikesSection from "@/components/pages/brands/page";
@@ -7,7 +8,9 @@ import React from "react";
 
 const BrandPage = () => {
   const { brand } = useParams();
+  const { data, isLoading, error } = useGetBikesByBrandQuery(brand);
 
+  console.log(data);
   const brandName = Array.isArray(brand) ? brand[0] : brand || "unknown";
 
   return (
